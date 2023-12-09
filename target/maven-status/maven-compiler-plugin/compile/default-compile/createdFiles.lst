@@ -1,0 +1,17 @@
+com\clearminds\test\TestVender.class
+com\clearminds\test\TestConsultarPrecio.class
+com\clearminds\a.class
+com\clearminds\test\TestCelda.class
+com\clearminds\componentes\Celda.class
+com\clearminds\test\TestBuscarCeldaProducto.class
+com\clearminds\test\TestProducto.class
+com\clearminds\test\TestVenderConCambio.class
+com\clearminds\test\TestIncrementarProductos.class
+com\clearminds\test\TestBuscarProducto.class
+com\clearminds\test\TestContenidoCelda.class
+com\clearminds\test\TestBusqueda.class
+com\clearminds\test\TestBuscarProductoNull.class
+com\clearminds\maquina\MaquinaDulces.class
+com\clearminds\componentes\Producto.class
+com\clearminds\test\TestCargarProducto.class
+com\clearminds\test\TestConfiguracion.class
