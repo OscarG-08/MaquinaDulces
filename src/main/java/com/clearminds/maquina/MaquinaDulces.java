@@ -88,14 +88,16 @@ public class MaquinaDulces {
 
     public void mostrarConfiguracion() {
         System.out.println("CONFIGURACION DE LA MAQUINA");
-        for (Celda celda : celdas) {
+        for (int i = 0; i < celdas.size(); i++) {
+            Celda celda = celdas.get(i);
             System.out.println("Celda - Codigo: " + celda.getCodigo());
         }
         System.out.println("Saldo: " + saldo);
     }
 
     public Celda buscarCelda(String codigo) {
-        for (Celda celda : celdas) {
+        for (int i = 0; i < celdas.size(); i++) {
+            Celda celda = celdas.get(i);
             if (celda.getCodigo().equals(codigo)) {
                 return celda;
             }
@@ -113,7 +115,8 @@ public class MaquinaDulces {
 
     public void mostrarProductos() {
         System.out.println("Productos en la Máquina:");
-        for (Celda celda : celdas) {
+        for (int i = 0; i < celdas.size(); i++) {
+            Celda celda = celdas.get(i);
             System.out.println("Celda - Código: " + celda.getCodigo());
             System.out.println("    Saldo: " + saldo);
             System.out.println("    Stock: " + celda.getStock());
@@ -129,7 +132,8 @@ public class MaquinaDulces {
     }
 
     public Producto buscarProductoEnCelda(String codigo) {
-        for (Celda celda : celdas) {
+        for (int i = 0; i < celdas.size(); i++) {
+            Celda celda = celdas.get(i);
             if (celda.getCodigo().equals(codigo)) {
                 return celda.getProducto();
             }
@@ -138,7 +142,8 @@ public class MaquinaDulces {
     }
 
     public double consultarPrecio(String codigo) {
-        for (Celda celda : celdas) {
+        for (int i = 0; i < celdas.size(); i++) {
+            Celda celda = celdas.get(i);
             if (celda.getCodigo().equals(codigo)) {
                 return celda.getProducto().getPrecio();
             }
@@ -147,7 +152,8 @@ public class MaquinaDulces {
     }
 
     public Celda buscarCeldaProducto(String codigoProducto) {
-        for (Celda celda : celdas) {
+        for (int i = 0; i < celdas.size(); i++) {
+            Celda celda = celdas.get(i);
             if (celda != null && celda.getProducto() != null) {
                 if (celda.getProducto().getCodigo().equals(codigoProducto)) {
                     return celda;
@@ -196,7 +202,8 @@ public class MaquinaDulces {
     public ArrayList<Producto> buscarMenores(double limite) {
         ArrayList<Producto> productosEncontrados = new ArrayList<>();
 
-        for (Celda celda : celdas) {
+        for (int i = 0; i < celdas.size(); i++) {
+            Celda celda = celdas.get(i);
             if (celda != null && celda.getProducto() != null) {
                 Producto producto = celda.getProducto();
                 if (producto.getPrecio() <= limite) {
