@@ -12,6 +12,8 @@ com\clearminds\test\TestContenidoCelda.class
 com\clearminds\test\TestBusqueda.class
 com\clearminds\test\TestBuscarProductoNull.class
 com\clearminds\maquina\MaquinaDulces.class
+com\clearminds\test\TestMaquinaDulces.class
 com\clearminds\componentes\Producto.class
 com\clearminds\test\TestCargarProducto.class
+com\clearminds\test\TestBuscarMenores.class
 com\clearminds\test\TestConfiguracion.class

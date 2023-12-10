@@ -15,15 +15,23 @@ public class TestBuscarProducto {
 
     public static void main(String[] args) {
         MaquinaDulces maquina = new MaquinaDulces();
-        maquina.configurarMaquina("A1", "A2", "B1", "B2");
+        maquina.agregarCelda("A");
+        maquina.agregarCelda("B");
+        maquina.agregarCelda("C");
+        maquina.agregarCelda("D");
 
-        Producto producto = new Producto("Papitas", 0.85, "KE34");
-        maquina.cargarProducto(producto, "B1", 4);
+        Producto productoA = new Producto("Papitas", 0.85, "KE34");
+        Producto productoB = new Producto("Galletas", 2.24, "BDCR");
+        maquina.cargarProducto(productoB, "D", 5);
+        maquina.cargarProducto(productoA, "B", 4);
+        Producto p1 = maquina.buscarProductoEnCelda("B");
+        Producto p2 = maquina.buscarProductoEnCelda("F");
+        System.out.println("Producto encontrado: " + p1.getNombre());
 
-        Producto productoEncontrado = maquina.buscarProductoEnCelda("B1");
-        System.out.println("Producto encontrado:" + productoEncontrado.getNombre());
-
-        Producto prod = maquina.buscarProductoEnCelda("A1");
-        System.out.println("Producto encontrado:" + prod);
+        if (p2 != null) {
+            System.out.println("Producto encontrado: " + p2.getNombre());
+        } else {
+            System.out.println("Producto encontrado: null");
+        }
     }
 }

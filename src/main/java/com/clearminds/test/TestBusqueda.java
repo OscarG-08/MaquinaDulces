@@ -12,14 +12,19 @@ import com.clearminds.maquina.MaquinaDulces;
  * @author Oscar
  */
 public class TestBusqueda {
+
     public static void main(String[] args) {
         MaquinaDulces maquina = new MaquinaDulces();
-        maquina.configurarMaquina("A1", "A2", "B1", "B2");
-        Celda celda = maquina.buscarCelda("A2");
+        maquina.agregarCelda("A");
+        maquina.agregarCelda("B");
+        maquina.agregarCelda("C");
+        maquina.agregarCelda("D");
+        maquina.mostrarConfiguracion();
+        Celda celda = maquina.buscarCelda("C");
         System.out.println("Celda Encontrada: " + celda.getCodigo());
-        Celda celda2 = maquina.buscarCelda("A3");
+        Celda celda2 = maquina.buscarCelda("F");
         if (celda2 == null) {
-            System.out.println("no existe la celda");
+            System.out.println("No existe la celda buscada");
         }
     }
 }
